@@ -6,6 +6,8 @@
 
         <link rel="stylesheet" href="ressources/css/style.css">
 
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
@@ -29,25 +31,15 @@
 
         <!-- NAVIGATION BAR -->
 
-        <!-- <div class="hoverMe">
-            <a class="menu"><i class="fa-solid fa-bars fa-spin-hover"></i></a>
+        <div id="nav"> 
         </div>
 
-        <div id="myNavBar" class="navBar">
+        <script>
+            $(function() {
+                $("#nav").load("ressources/html/navBar.html");
+            });
+        </script>
 
-            <div class="socials">
-                <a href="#" onclick='window.open("https://www.linkedin.com/in/mael-nouvel");return false;' class="linkedin" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
-                <a href="#" onclick='window.open("https://github.com/Bouyou34");return false;' class="github"><i class="fa-brands fa-github fa-2x"></i></a>
-            </div>
-
-            <a class="active"><i class="fa-solid fa-house"></i> Acceuil</a>
-            <a href="about_me.html" class="btns"> A propos de moi</a>
-            <a href="#" class="btns"> Me contacter</a>
-            <a href="#" class="btns"> link</a>
-
-            <!-- <i class="fa-solid fa-moon" onclick="ressources/js/darkMode.js"></i> -->
-
-        </div> -->
 
         <!-- BODY -->
 
