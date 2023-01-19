@@ -1,0 +1,118 @@
+/* Global */
+
+:root {
+    --bgColor: #202020;
+    --bgImage1: url(/assets/images/background.png);
+    --bgPattern: radial-gradient(rgba(2255, 255, 255, 0.1) 9%, transparent 9%);
+
+    --bigText: clamp(2em, 3vw, 8rem);
+
+    /* --active-index: 1; */
+}
+
+* {
+    box-sizing: border-box;
+    box-sizing: inherit;
+    font-family: 'Montserrat', sans-serif;
+    /* border: red solid; */
+    /* ^ Check if everything is the size it needs to be */
+}
+
+body {
+    background-color: var(--bgColor);
+    margin: 0px;
+}
+
+/* Menu style */
+
+#menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+#menu__items {
+    margin-left: clamp(1rem, 10%, 48rem);
+    position: relative;
+    z-index: 2;
+}
+
+.title--big {
+    font-size: var(--bigText);
+}
+
+.menu__link {
+    color: white;
+
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 350ms ease;
+}
+
+/* When hovering the menu, phase out the unselected elements   and phase in the selected one */
+
+#menu__items:hover>.menu__link:not(:hover) {
+    opacity: 0.3;
+}
+
+/* Background */
+
+#menu--background {
+    height: 100vh;
+    width: 100vw;
+
+    background-image: var(--bgPattern);
+
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    z-index: 1;
+
+    transition: opacity 600ms ease,
+        background-size 600ms ease,
+        background-position 600ms ease;
+}
+
+#menu--background--image {
+    height: 100%;
+    width: 100%;
+
+    background-image: var(--bgImage1);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+
+    background-position: center 40%;
+    background-size: 110vmax;
+    opacity: 0.3;
+
+    transition: opacity 600ms ease,
+        background-size 600ms ease,
+        background-position 600ms ease;
+}
+
+#menu__items:hover~#menu--background--image {
+    background-size: 100vmax;
+    opacity: 0.10;
+}
+
+#menu__items:hover~#menu--background {
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+}
+
+/* #menu > #menu--background {
+    background-position: 0% calc(-25% * (var(--active-index, 0) + 1));
+}
+
+#menu > #menu-background-image {
+    background-position: center calc(45% + 5% * var(--active-index, 1));
+} */

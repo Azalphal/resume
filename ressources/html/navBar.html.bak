@@ -1,0 +1,16 @@
+<div class="hoverMe">
+    <a class="menu"><i class="fa-solid fa-bars fa-spin-hover"></i></a>
+</div>
+
+<div id="myNavBar" class="navBar">
+
+    <link rel="stylesheet" href="/ressources/css/style.css">
+    <script src="https://kit.fontawesome.com/53c32fa87f.js" crossorigin="anonymous"></script>
+
+    <div class="socials">
+        <a href="#" onclick='window.open("https://www.linkedin.com/in/mael-nouvel");return false;' class="linkedin" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+        <a href="#" onclick='window.open("https://github.com/Bouyou34");return false;' class="github"><i class="fa-brands fa-github fa-2x"></i></a>
+    </div>
+    <!-- <i class="fa-solid fa-moon" onclick="ressources/js/darkMode.js"></i> -->
+
+</div>
