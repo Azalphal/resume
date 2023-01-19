@@ -1,1 +1,0 @@
-// why is dark mode so hard to implement :( [I know I just gotta learn lol]
