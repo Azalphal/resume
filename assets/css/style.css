@@ -1,4 +1,4 @@
-/* Global */
+/* Global styling */
 
 :root {
     --bgColor: #202020;
@@ -7,7 +7,7 @@
 
     --bigText: clamp(2em, 3vw, 8rem);
 
-    /* --active-index: 1; */
+    --active-index: 1;
 }
 
 * {
@@ -20,10 +20,17 @@
 
 body {
     background-color: var(--bgColor);
+    color: white;
     margin: 0px;
 }
 
-/* Menu style */
+/* Class styling */
+
+.title--big {
+    font-size: var(--bigText);
+}
+
+/* Menu styling */
 
 #menu {
     height: 100vh;
@@ -37,11 +44,6 @@ body {
     position: relative;
     z-index: 2;
 }
-
-.title--big {
-    font-size: var(--bigText);
-}
-
 .menu__link {
     color: white;
 
@@ -57,7 +59,7 @@ body {
     opacity: 0.3;
 }
 
-/* Background */
+/* Background styling & interactivity */
 
 #menu--background {
     height: 100vh;
@@ -74,9 +76,9 @@ body {
 
     z-index: 1;
 
-    transition: opacity 600ms ease,
-        background-size 600ms ease,
-        background-position 600ms ease;
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
 }
 
 #menu--background--image {
@@ -90,18 +92,18 @@ body {
     top: 0;
     z-index: 0;
 
-    background-position: center 40%;
+    background-position: center;
     background-size: 110vmax;
     opacity: 0.3;
 
-    transition: opacity 600ms ease,
-        background-size 600ms ease,
-        background-position 600ms ease;
+    transition: opacity 2000ms ease,
+        background-size 2000ms ease,
+        background-position 2000ms ease;
 }
 
 #menu__items:hover~#menu--background--image {
     background-size: 100vmax;
-    opacity: 0.10;
+    opacity: 0.15;
 }
 
 #menu__items:hover~#menu--background {
@@ -109,10 +111,10 @@ body {
     opacity: 0.5;
 }
 
-/* #menu > #menu--background {
+#menu > #menu--background {
     background-position: 0% calc(-25% * (var(--active-index, 0) + 1));
 }
 
-#menu > #menu-background-image {
+#menu > #menu--background--image {
     background-position: center calc(45% + 5% * var(--active-index, 1));
-} */
+}
