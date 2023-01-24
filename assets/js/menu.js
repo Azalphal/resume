@@ -3,7 +3,8 @@ window.addEventListener('load', () => {
     const menuBackground = document.querySelector("#menu--background");
     const menuBackgroundImage = document.querySelector("#menu--background--image");
 
-    console.log(`Correctly loaded the background pattern in "${menuBackground}"`,`Correctly loaded the background image in "${menuBackgroundImage}"`, `Correctly loaded the text elements in "${text}"`)
+    console.log(`Correctly loaded the background pattern in "${menuBackground}"`,`\nCorrectly loaded the background image in "${menuBackgroundImage}"`, `\nCorrectly loaded the text elements below:`)
+    console.dir(text)
 
     Array.from(text)
         .forEach((item, index) => {
