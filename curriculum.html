@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="https://kit.fontawesome.com/9f6bcddd0a.js" crossorigin="anonymous"></script>
+    <script src="assets/js/back.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
@@ -18,56 +19,62 @@
 <body>
 
     <div id="CV__section--container">
+        
+        <button id="back" type="button" onclick="backButton()">
+            <i class="fa-solid fa-house"></i>
+        </button>
 
-        <section id="top" class="CV__section active-section-down">
+        <section id="top" class="CV__section flex active-section-down">
+            <i class="nav--arrow fa-solid fa-angle-up"></i>
             <div class="top__section">
-                <h1 class="top--name">Maël NOUVEL</h1>
-                <h2 class="top--title no--margin">Android Engineer</h2>
-                <p class="top--qual">Autodidacte  •  Autonome  •  Capacités d'adaptation</p>
+                <h1 class="top--name title">Maël NOUVEL</h1>
+                <h2 class="top--title no--margin title">Android Engineer</h2>
+                <p class="top--qual text">Autodidacte  •  Autonome  •  Capacités d'adaptation</p>
             </div>
+            <i class="nav--arrow fa-solid fa-angle-down"></i>
         </section>
 
         <section id="comp" class="CV__section flex">
             <div class="comp__section">
-                <div class="comp--title title">Compétences professionnelles</div>
+                <div class="comp--title title title--uppercase">Compétences professionnelles</div>
                 <ul class="comp__cont">
-                    <li class="comp--item">Analyser des demandes client</li>
-                    <li class="comp--item">Établir un cahier des charges</li>
-                    <li class="comp--item">Réaliser un prototype de la solution technique</li>
-                    <li class="comp--item">Concevoir et développer les programmes et applications informatiques</li>
-                    <li class="comp--item">Analyser des problèmes techniques</li>
-                    <li class="comp--item">Réaliser un modelage 3D simple sous <span class="brand"><a
+                    <li class="comp--item text">Analyser des demandes client</li>
+                    <li class="comp--item text">Établir un cahier des charges</li>
+                    <li class="comp--item text">Réaliser un prototype de la solution technique</li>
+                    <li class="comp--item text">Concevoir et développer les programmes et applications informatiques</li>
+                    <li class="comp--item text">Analyser des problèmes techniques</li>
+                    <li class="comp--item text">Réaliser un modelage 3D simple sous <span class="brand"><a
                                 href="https://www.blender.org" target="_blank">Blender</a></span>
                 </ul>
             </div>
-            <div class="comp__section">
-                <div class="comp--title title">Languages informatiques</div>
-                <ul class="comp__cont comp__cont2">
-                    <li class="comp--item"><a href="http://" target="_blank">Kotlin</a></li>
-                    <li class="comp--item"><a href="http://" target="_blank">C#</a></li>
-                    <li class="comp--item"><a href="http://" target="_blank">html</a></li>
-                    <li class="comp--item"><a href="http://" target="_blank">CSS</a></li>
-                    <li class="comp--item"><a href="http://" target="_blank">javascript</a></li>
+            <div class="comp__section__code">
+                <div class="comp--title title title--uppercase">Languages informatiques</div>
+                <ul class="comp__cont">
+                    <li class="comp--item text"><a href="http://" target="_blank">Kotlin</a></li>
+                    <li class="comp--item text"><a href="http://" target="_blank">C#</a></li>
+                    <li class="comp--item text"><a href="http://" target="_blank">html</a></li>
+                    <li class="comp--item text"><a href="http://" target="_blank">CSS</a></li>
+                    <li class="comp--item text"><a href="http://" target="_blank">javascript</a></li>
                 </ul>
             </div>
         </section>
 
         <section id="exp" class="CV__section flex">
             <div class="exp__section">
-                <div class="exp--title title">expériences professionnelles</div>
+                <div class="exp--title title title--uppercase">expériences professionnelles</div>
                 <ul id="exp__cont">
-                    <li class="exp--item">2022/2023 Service civique conseiller numérique <span class="brand">Mission
+                    <li class="exp--item text">2022/2023 Service civique conseiller numérique <span class="brand">Mission
                             Locale</span>
                     </li>
-                    <li class="exp--item">2021 Agent comercial <span class="brand">Free</span></li>
-                    <li class="exp--item">2021 Emloyé polyvalent de restauration <span class="brand">Burger king</span>
+                    <li class="exp--item text">2021 Agent comercial <span class="brand">Free</span></li>
+                    <li class="exp--item text">2021 Emloyé polyvalent de restauration <span class="brand">Burger king</span>
                     </li>
-                    <li class="exp--item">2019 Traducteur Anglais/Français <span class="brand">Freelance</span></li>
-                    <li class="exp--item">2018/2019 Régisseur audio <span class="brand">Salle de spectacle locale</span>
+                    <li class="exp--item text">2019 Traducteur Anglais/Français <span class="brand">Freelance</span></li>
+                    <li class="exp--item text">2018/2019 Régisseur audio <span class="brand">Salle de spectacle locale</span>
                     </li>
-                    <li class="exp--item">2018 Régisseur audio <span class="brand">Centre d'animation municipal</span>
+                    <li class="exp--item text">2018 Régisseur audio <span class="brand">Centre d'animation municipal</span>
                     </li>
-                    <li class="exp--item">2017/2018 Aide-Technicien Informatique <span class="brand">Mairie</span>
+                    <li class="exp--item text">2017/2018 Aide-Technicien Informatique <span class="brand">Mairie</span>
                     </li>
                 </ul>
             </div>
@@ -75,26 +82,25 @@
 
         <section id="forma" class="CV__section flex">
             <div id="forma__section">
-                <div class="forma--title title">Formations</div>
+                <div class="forma--title title title--uppercase">Formations</div>
                 <ul id="forma__cont">
-                    <li class="forma--item">2021 Formation Hazard Analysis Control Point (HACCP) <span
+                    <li class="forma--item text">2021 Formation Hazard Analysis Control Point (HACCP) <span
                             class="brand">Burger King</span></li>
-                    <li class="forma--item">2020 Bac Pro systèmes électroniques numériques Option RISC réseaux
+                    <li class="forma--item text">2020 Bac Pro systèmes électroniques numériques Option RISC réseaux
                         inforamatiques et systèmes (télé)communiquants <span class="brand">Lycée de secteur</span></li>
-                    <li class="forma--item">2016 Diplôme national du Brevet <span class="brand">Collège de secteur</span></li>
                 </ul>
             </div>
         </section>
 
         <section id="other" class="CV__section flex">
             <div class="other__section">
-                <div class="other--title title">Renseignements complémentaires</div>
+                <div class="other--title title title--uppercase">Renseignements complémentaires</div>
                 <ul class="other__cont">
-                    <li class="other--item">Connaissance des secteurs jeux vidéos, applictions et jeux mobiles.</li>
-                    <li class="other--item">2010/2020 Batterie (professeur + concert)</li>
-                    <li class="other--item">2010/Présent Batterie (Composition + groupes)</li>
-                    <li class="other--item">Montage audio sous Studio One</li>
-                    <li class="other--item">Montage de son live en bénévolat</li>
+                    <li class="other--item text">Connaissance des secteurs jeux vidéos, applictions et jeux mobiles.</li>
+                    <li class="other--item text">2010/2020 Batterie (professeur + concert)</li>
+                    <li class="other--item text">2010/Présent Batterie (Composition + groupes)</li>
+                    <li class="other--item text">Montage audio sous Studio One</li>
+                    <li class="other--item text">Montage de son live en bénévolat</li>
                 </ul>
             </div>
         </section>
