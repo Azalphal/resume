@@ -1,19 +1,30 @@
 /* Variables */
 
 :root {
-    --bgColor: #202020;
-    --bgImage1: url(../images/background.png);
-    --bgPattern: radial-gradient(rgba(2255, 255, 255, 0.1) 9%, transparent 9%);
+    --text: clamp(1rem, 2rem, 3rem);
 
+    --size--2: clamp(0.69rem, 0.63rem + 0.31vw, 1.36rem);
+    --size--1: clamp(0.83rem, 0.74rem + 0.40vw, 1.70rem);
+    --size-0: clamp(1.00rem, 0.88rem + 0.52vw, 2.13rem);
+    --size-1: clamp(1.20rem, 1.05rem + 0.67vw, 2.66rem);
+    --size-2: clamp(1.44rem, 1.25rem + 0.86vw, 3.32rem);
+    --size-3: clamp(1.73rem, 1.48rem + 1.11vw, 4.15rem);
+    --size-4: clamp(2.07rem, 1.75rem + 1.43vw, 5.19rem);
+    --size-5: clamp(2.49rem, 2.07rem + 1.84vw, 6.49rem);
+
+    --active-index: 0;
+
+    --bgColor: #202020;
+    --bgPattern: radial-gradient(rgba(2255, 255, 255, 0.1) 9%, transparent 9%);
+    --bgImage1: url(../images/background.png);
+
+    /* CV's background, change accordingly */
     --bgImageS1: url(../images/frog.jpg);
     --bgImageS2: url(../images/Art_planet.png);
     --bgImageS3: url(../images/Art_planet_middle.png);
     --bgImageS4: url(../images/Art_planet_final.png);
     --bgImageS5: url(../images/top_bg-home.png);
 
-    --bigText: clamp(2em, 3vw, 8rem);
-
-    --active-index: 0;
 }
 
 /* Global styling */
@@ -64,16 +75,62 @@ a {
 
 .flex {
     display: flex;
-    align-items: center;
-}
-
-.title--big {
-    font-size: var(--bigText);
 }
 
 .title {
+    font-size: var(--size-5);
+}
+
+.title--sub {
+    font-size: var(--size-3);
+}
+
+.text {
+    font-size: var(--size-0);
+}
+
+.text--XS {
+    font-size: var(--size--1);
+}
+
+.title--uppercase {
     text-transform: uppercase;
     text-decoration: underline;
+}
+
+.justify {
+    text-align: justify;
+}
+
+/* Will be on all pages beside index.html */
+
+#back {
+    z-index: 10;
+
+    height: 4rem;
+    width: 4rem;
+    left: 1rem;
+    top: -1rem;
+
+    position: fixed;
+
+    transform: translateX(-50%);
+    background-color: rgb(130, 21, 219);
+    box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
+    border: none;
+    border-radius: 5rem;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: transform, background-color;
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+}
+
+#back:hover {
+    background-color: aquamarine;
+    transform: translateX(-50%) scale(1.5);
 }
 
 /* Menu styling */
@@ -84,7 +141,13 @@ a {
     z-index: 2;
 }
 
+#menu {
+    align-items: center;
+}
+
 .menu__link {
+    font-size: clamp(2rem, 3vw, 8rem);
+
     color: white;
 
     display: block;
@@ -168,8 +231,7 @@ a {
     height: 100%;
 
     position: absolute;
-    overflow: hidden
-    ;
+    overflow: hidden;
     top: 0;
     left: 0;
 
@@ -181,7 +243,12 @@ a {
 }
 
 #comp {
+    flex-direction: column;
     background-image: var(--bgImageS2);
+}
+
+#comp__section__code {
+    justify-content: right;
 }
 
 #exp {
@@ -194,6 +261,10 @@ a {
 
 #other {
     background-image: var(--bgImageS5);
+}
+
+#top, #comp, #exp, #forma, #other {
+    padding-top: 3rem;
 }
 
 .top--name {
@@ -210,13 +281,9 @@ a {
     height: 100vh;
     width: 100vw;
 
-    align-items: center;
-    justify-content: center;
-
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
     visibility: hidden;
 
     z-index: 1;
@@ -250,9 +317,16 @@ a {
     animation: slide-in-down 0.5s forwards;
 }
 
-.previous-section-up, .previous-section-down, .active-section-up, .active-section-down {
+.previous-section-up,
+.previous-section-down,
+.active-section-up,
+.active-section-down {
     transition: all 1s ease-in-out;
     animation-fill-mode: forwards;
+}
+
+.nav--arrow {
+    z-index: 10;
 }
 
 @keyframes slide-out-up {
@@ -301,4 +375,11 @@ a {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* About me page */
+
+#about__section {
+    padding: 3rem;
+    flex-direction: column;
 }
