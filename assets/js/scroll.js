@@ -36,6 +36,14 @@ container.onwheel = e => {
     switchSection(e.deltaY > 0 ? 1 : -1);
 };
 
+document.addEventListener("click", e => {
+    if (e.target.classList.contains("fa-angle-up")) {
+        switchSection(-1);
+    } else if (e.target.classList.contains("fa-angle-down")) {
+        switchSection(1);
+    }
+});
+
 document.addEventListener("keydown", e => {
     if (e.key === 'ArrowUp') {
         switchSection(-1)
@@ -54,9 +62,9 @@ document.addEventListener("touchend", e => {
     const threshold = 50;
     if (Math.abs(deltaY) > threshold) {
         if (deltaY > 0) {
-          switchSection(-1)
+            switchSection(-1)
         } else {
-          switchSection(1)
+            switchSection(1)
         }
     }
 });
