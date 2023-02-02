@@ -92,6 +92,14 @@ a {
     font-size: var(--size--1);
 }
 
+.text--black {
+    color: var(--primaryColor);
+}
+
+.text--white {
+    color:white;
+}
+
 .title--uppercase {
     text-transform: uppercase;
     text-decoration: underline;
@@ -295,14 +303,16 @@ a {
 
     position: absolute;
 
-    left: 40%;
+    left: 40vw;
     top: 0;
     height: 100%;
-    width: 60%;
+    width: 60vw;
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    overflow: hidden;
 }
 
 #comp__side {
@@ -348,7 +358,9 @@ a {
     background-color: rgba(193, 189, 219, 0.7);
     color: var(--primaryColor);
 
-    margin-left: 3rem;
+    padding: 1rem;
+
+    margin-left: 5rem;
     margin-right: 3rem;
     border-radius: 1rem;
     height: fit-content;
@@ -525,9 +537,35 @@ a {
     animation-fill-mode: forwards;
 }
 
-.nav--arrow {
+.fa-angle-up, .fa-angle-down {
+    background-color: var(--primaryColor);
+    border-color: var(--secondaryColor);
+    color: var(--secondaryColor);
+    border-style: groove;
+    border-radius: 20%;
+
     z-index: 10;
+
+    position: absolute;
+    left: 1rem;
+
+    transition: all 500ms ease-in-out 0s;
 }
+
+.fa-angle-up:hover, .fa-angle-down:hover {
+    background-color: var(--secondaryColor);
+    border-color: var(--primaryColor);
+    color: var(--primaryColor);
+}
+
+.fa-angle-up {
+    top: 5rem;
+}
+
+.fa-angle-down {
+    bottom: 5rem;
+}
+
 
 @keyframes slide-out-up {
     0% {
@@ -577,9 +615,38 @@ a {
     }
 }
 
-/* About me page */
+/* Other pages */
 
-#about__section {
+#about {
+    background-image: url(/assets/images/novelAIBG10.png);
+}
+
+#portfolio {
+    background-image: url(/assets/images/novelAIBG12.png);
+}
+
+#contact {
+    background-image: url(/assets/images/novelAIBG5.png);
+}
+
+#about,
+#portfolio,
+#contact {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+#about__section,
+#portfolio__section,
+#contact__section {
+    background-color: rgba(193, 189, 219, 0.7);
+    color: var(--primaryColor);
+    border-radius: 3%;
+
+    margin: 5rem;
     padding: 3rem;
     flex-direction: column;
 }
