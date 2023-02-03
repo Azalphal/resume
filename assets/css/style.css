@@ -618,15 +618,15 @@ a {
 /* Other pages */
 
 #about {
-    background-image: url(/assets/images/novelAIBG10.png);
+    background-image: url(../images/novelAIBG10.png);
 }
 
 #portfolio {
-    background-image: url(/assets/images/novelAIBG12.png);
+    background-image: url(../images/novelAIBG12.png);
 }
 
 #contact {
-    background-image: url(/assets/images/novelAIBG5.png);
+    background-image: url(../images/novelAIBG5.png);
 }
 
 #about,
