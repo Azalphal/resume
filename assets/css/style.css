@@ -256,16 +256,6 @@ a {
     flex-direction: column;
 }
 
-#forma {
-    background: rgb(104, 134, 142);
-    background: linear-gradient(0deg, rgba(104, 134, 142, 1) 0%, rgba(128, 156, 162, 1) 16%, rgba(119, 157, 167, 1) 23%, rgba(88, 157, 172, 1) 33.5%, rgba(141, 164, 168, 1) 34%, rgba(146, 168, 170, 1) 49%, rgba(129, 158, 164, 1) 66%, rgba(127, 156, 163, 1) 83%, rgba(213, 213, 212, 1) 85%, rgba(219, 212, 211, 1) 100%);
-}
-
-#other {
-    background: rgb(118, 125, 137);
-    background: linear-gradient(0deg, rgba(118, 125, 137, 1) 0%, rgba(98, 108, 116, 1) 50%, rgba(128, 131, 130, 1) 100%);
-}
-
 #top,
 #comp,
 #exp,
